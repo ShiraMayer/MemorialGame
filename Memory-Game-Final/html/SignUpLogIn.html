@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="he" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/LogSign.css">
+    <title>Welcom to Disney-Games </title>
+</head>
+
+<body>
+    <section class="card">
+        <ul class="tabs" class="buttons">
+            <li class="tab">
+                <button id="okey" onclick="ChangeDiv()">Sign Up</button>
+            </li>
+            <li class="tab">
+                <button  id="okey" onclick="ChangeDiv()">Log In</button>
+            </li>
+        </ul>
+        <div id="SignUpTemp">
+                <form name='form-login' action="../html/HomePage.html"  onsubmit="SignUP()">
+                    
+                    <input  class="input" type="text" id="UserName" placeholder="Your Name">
+                    
+                    <input class="input" type="email" id="Email" placeholder="Your Email">
+                    
+                    <input class="input" type="password" id="pw" placeholder="Set A Password">
+                    
+                    <input class="input" type="password" id="pw2"  placeholder="Confirm password"><br>
+                   
+                    <input class="input" type="text" id="tel" placeholder="tel">
+                                        
+                    <input id="getStart" type="submit" value="GET STARTED">
+
+                </form>
+        </div>
+        <div id="allLogin">
+                <form name='form-login' action="../html/HomePage.html" onsubmit="LogIn()">
+                    
+                    <input class="input" type="email" id="userEmail" placeholder="Your Email">
+                    
+                    <input class="input" type="password" id="userPw" placeholder="Password">
+                    
+                    <input id="getStart" type="submit" value="GET STARTED">
+                </form>
+        </div>
+    </section>
+    <script type="text/javascript" src="../js/SignUpLogin.js"></script>
+
+</body>
+
+</html>

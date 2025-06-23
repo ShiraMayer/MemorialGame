@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+
+html,
+body {
+    background-image: url("../pictures/tapet.jpg");
+    background-attachment: fixed;
+    background-size: contain;
+    margin-top: 60px;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    height: 100vh;
+    margin-bottom: 0;
+
+}
+
+#nav {
+    border: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(213, 213, 213, 0.8);
+    width: 70%;
+    padding: 10px 20px;
+    margin: auto;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    font-size: 20px;
+}
+
+.button {
+    margin-right: 2px;
+}
+
+h3 {
+    margin-right: 18px;
+}
+
+h1 {
+    margin: auto;
+    background-color: rgb(238, 46, 46);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px 10px 0 0;
+    width: 72.5%;
+    padding-left: 5px;
+}
+
+button,
+a {
+    padding: 7px 15px;
+    font-size: 22px;
+    border-radius: 10px 10px 10px 0;
+    cursor: pointer;
+
+}
+
+#TimerDisplay {
+    margin-left: 0;
+}
+
+#part {
+    display: inline-flex;
+    background-color: rgb(238, 46, 46);
+    border-radius: 10px 10px 10px 0;
+    padding: 3px;
+    align-items: center;
+}
+
+#newGame {
+    font-size: 50px;
+    border-radius: 10px 10px 10px 0;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(255, 207, 35, 0.792);
+    border-radius: 10px;
+}
+
+#newGame:hover,
+button:hover,
+a:hover {
+    border-radius: 10px 10px 10px 0;
+    background-color: rgb(255, 207, 35, 0.792);
+    color: white;
+    -webkit-text-stroke: 2px rgb(34, 34, 34);
+    border-color: black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s linear;
+
+}
+
+#instruction {
+    display: none;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(255, 207, 35, 0.792);
+    color: black;
+    padding: 10vh;
+    margin-left: 186px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 26.5px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+#cards {
+    margin-top: 5%;
+    margin-left: 14%;
+    width: 75%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    row-gap: 0.1%;
+
+}
+
+.crdBtn {
+    background-image: url("../pictures/game/backgroundcard.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 10em;
+    height: 10em;
+    transition: all 0.5s linear;
+    transform-style: preserve-3d;
+    margin-bottom: 12%;
+}
+
+#cards img {
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.front:hover,
+.back:hover {
+    box-shadow: 0px 0px 20px 1px #000;
+}
+
+#unitCounter {
+    display: flex;
+    border: 1px;
+    border-radius: 10px;
+    width: 160px;
+    height: 35px;
+    border: 3px solid rgb(238, 46, 46);
+
+}
+
+@keyframes smoothFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    25% {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translateX(-10px);
+    }
+    75% {
+        opacity: 0.8;
+        transform: translateX(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) ;
+    }
+}
+
+#part1 {
+    background-color: rgba(255, 207, 35);
+    height: 35px;
+    width: 25%;
+    border-radius: 10px 0 0 10px;
+    animation: smoothFadeIn 0.5s ease-in-out;
+}
+
+#part2 {
+    background-color: rgba(255, 207, 35);
+    height: 35px;
+    width: 25%;
+    animation: smoothFadeIn 0.5s ease-in-out;
+}
+
+#part3 {
+    background-color: rgba(255, 207, 35);
+    height: 35px;
+    width: 25%;
+    animation: smoothFadeIn 0.5s ease-in-out;
+}
+
+#part4 {
+    background-color: rgba(255, 207, 35);
+    height: 35px;
+    width: 25%;
+    border-radius: 0 10px 10px 0;
+    animation: smoothFadeIn 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+
+    .crdBtn {
+        margin-bottom: 0%;
+        margin-top: 0%;
+    }
+
+    #card img {
+        width: 5em;
+        height: 5em;
+    }
+
+    #cards {
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+
+    .container {
+        display: block;
+        background-color: rgb(213, 213, 213, 0.8);
+        width: 70%;
+        padding: 10px 20px;
+        margin: auto;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        font-size: 20px;
+    }
+
+    #part {
+        display: block;
+        margin-top: 10px;
+    }
+
+    a {
+        padding: 3px;
+        margin: 0;
+    }
+
+    #instruction {
+        display: none;
+        width: 60%;
+        height: fit-content;
+        background-color: rgba(255, 207, 35, 0.792);
+        color: black;
+        padding: 10vh;
+        margin-left: 0;
+    }
+
+    h1 {
+        margin-top: 100px;
+        background-color: rgb(238, 46, 46);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        border-radius: 10px 10px 0 0;
+        width: 72.5%;
+        padding-left: 5px;
+    }
+
+    #unitCounter {
+        margin-top: 8px;
+    }
+
+}

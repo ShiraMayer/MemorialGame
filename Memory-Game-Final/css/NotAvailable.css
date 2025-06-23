@@ -1,0 +1,23 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+#nav {
+    border: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    padding: 0;
+}
+#pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+img {
+  height: 600px;
+  width: 600px;
+}
